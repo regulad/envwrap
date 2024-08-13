@@ -30,7 +30,7 @@ except ImportError:
 
 
 package = "envwrap"
-python_versions = ["3.11"]
+python_versions = ["3.8", "3.9", "3.10", "3.11", "3.12"]
 nox.needs_version = ">= 2023.4.22"
 nox.options.sessions = (
     "pre-commit",
@@ -40,7 +40,7 @@ nox.options.sessions = (
     "typeguard",
     "xdoctest",
     "docs-build",
-    "pyinstaller",
+    # "pyinstaller",
 )
 
 
@@ -248,24 +248,24 @@ def docs(session: Session) -> None:
     session.run("sphinx-autobuild", *args)
 
 
-@session(python=python_versions[0])
-def pyinstaller(session: Session) -> None:
-    """Build the executable."""
-    session.install(".")
-    session.install("pyinstaller")
-
-    args: list[str] = []
-
-    args.append("--name")
-    args.append(package)
-
-    args.append("--collect-all")
-    args.append(package)
-
-    args.append("--onefile")
-
-    args.append("--clean")
-
-    args.append("--noconfirm")
-
-    session.run("pyinstaller", *args, str(Path("src", "launcher.py")))
+# @session(python=python_versions[0])
+# def pyinstaller(session: Session) -> None:
+#     """Build the executable."""
+#     session.install(".")
+#     session.install("pyinstaller")
+#
+#     args: list[str] = []
+#
+#     args.append("--name")
+#     args.append(package)
+#
+#     args.append("--collect-all")
+#     args.append(package)
+#
+#     args.append("--onefile")
+#
+#     args.append("--clean")
+#
+#     args.append("--noconfirm")
+#
+#     session.run("pyinstaller", *args, str(Path("src", "launcher.py")))

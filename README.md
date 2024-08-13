@@ -6,8 +6,6 @@
 [![License](https://img.shields.io/pypi/l/envwrap)][license]
 
 [![Read the documentation at https://envwrap.readthedocs.io/](https://img.shields.io/readthedocs/envwrap/latest.svg?label=Read%20the%20Docs)][read the docs]
-[![Tests](https://github.com/regulad/envwrap/workflows/Tests/badge.svg)][tests]
-[![Codecov](https://codecov.io/gh/regulad/envwrap/branch/main/graph/badge.svg)][codecov]
 
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Black](https://img.shields.io/badge/code%20style-black-000000.svg)][black]
@@ -34,10 +32,6 @@ You can install _envwrap_ via [pip] from [PyPI]:
 ```console
 $ pip install envwrap
 ```
-
-## Usage
-
-Please see the [Command-line Reference] for details.
 
 ## Contributing
 
